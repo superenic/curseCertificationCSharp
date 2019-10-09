@@ -7,7 +7,7 @@ namespace ProgramingInCSharp.Event
 {
     class DelegateFunction : ICommand
     {
-        private delegate int Operator(int a, int b);
+        private delegate int Operador(int a, int b);
         private Func<int, int, int> Functionality;
         private Action<string> logMessage = (message) => Console.WriteLine(message);
 
@@ -18,9 +18,9 @@ namespace ProgramingInCSharp.Event
 
         public void StartCommand()
         {
-            Operator times = (first, second) => first * second;
+            Operador times = (first, second) => first * second;
 
-            Operator[] operators = new Operator[]
+            Operador[] operators = new Operador[]
             {
                 this.add,
                 this.sub,
@@ -30,10 +30,11 @@ namespace ProgramingInCSharp.Event
 
             int a = 10, b = 5;
 
-            foreach (Operator @operator in operators)
+            foreach (Operador operatora in operators)
             {
-                logMessage(Convert.ToString(@operator(a, b)));
+                logMessage(Convert.ToString(operatora(a, b)));
             }
+            Console.WriteLine(add(b:10, a: 5));
 
             // return true or false, generic is parameters.
             Predicate<int> dividesByThree = (i) => i % 3 == 0;

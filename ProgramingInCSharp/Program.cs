@@ -1,7 +1,9 @@
 ﻿using System;
 using ProgramingInCSharp.Contract;
+using ProgramingInCSharp.Diagnostic;
 using ProgramingInCSharp.Event;
 using ProgramingInCSharp.Threads;
+using ProgramingInCSharp.ValuesAndReferences;
 
 namespace ProgramingInCSharp
 {
@@ -34,6 +36,13 @@ namespace ProgramingInCSharp
                 new VolatileVariableThreat(),
                 new ActionDelegator(),
                 new DelegateFunction(),
+                new Types(),
+                new CreateAStructure(),
+                new ArrayClass(),
+                new ImplicitAndExplicit(),
+                new EachCharacter(),
+                new VerboseAndTerse(),
+                new AnnotationStudy(),
             };
 
             var salida = "q";
@@ -68,6 +77,7 @@ namespace ProgramingInCSharp
 
                     if (tareas[index] != null)
                     {
+                        Console.Clear();
                         Console.WriteLine("empieza " + tareas[index].GetType().Name);
                         Console.WriteLine(tareas[index].Description);
                         tareas[index].StartCommand();
