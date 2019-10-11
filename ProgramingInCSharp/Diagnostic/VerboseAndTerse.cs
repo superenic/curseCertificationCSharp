@@ -1,14 +1,15 @@
-﻿using ProgramingInCSharp.Contract;
+﻿//#define TERSE
+#define VERBOSE
+
+using ProgramingInCSharp.Contract;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 
 namespace ProgramingInCSharp.Diagnostic
 {
     class VerboseAndTerse : ICommand
     {
-        public string Description => "Diagnostic verbose and terse";
+        public string Description => "Use #define to execute only the command inside of condition.";
         [Conditional("VERBOSE"), Conditional("TERSE")]
         static void reportHeader()
         {

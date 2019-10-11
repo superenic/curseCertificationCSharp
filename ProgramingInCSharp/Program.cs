@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using ProgramingInCSharp.Contract;
 using ProgramingInCSharp.Diagnostic;
 using ProgramingInCSharp.Event;
@@ -14,6 +15,7 @@ namespace ProgramingInCSharp
             ICommand[] tareas = new ICommand[]
             {
                 new Threadings(),
+                new ThreadRandomLocal(),
                 new ParallelInvoke(),
                 new TaskEnumerable(),
                 new TaskStopable(),
@@ -43,6 +45,11 @@ namespace ProgramingInCSharp
                 new EachCharacter(),
                 new VerboseAndTerse(),
                 new AnnotationStudy(),
+                new DinamicVariable(),
+                new IWillDisplayIfUseInterface(),
+                new ChangeOpinionFather(),
+                new NumerableTest(),
+                new GetAssamblyWay(),
             };
 
             var salida = "q";

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProgramingInCSharp.Contract;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -52,6 +53,21 @@ namespace ProgramingInCSharp.ValuesAndReferences
         {
             count = 0;
             this.limit = limit;
+        }
+    }
+
+    class NumerableTest : ICommand
+    {
+        public string Description => "I will run a custum Enumerable";
+
+        public void StartCommand()
+        {
+            IEnumerable e = new EnumerableThing(10);
+
+            foreach (int i in e)
+                Console.WriteLine(i);
+
+            Console.ReadKey();
         }
     }
 }
