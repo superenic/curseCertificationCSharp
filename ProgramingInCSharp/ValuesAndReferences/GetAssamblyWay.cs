@@ -32,9 +32,9 @@ namespace ProgramingInCSharp.ValuesAndReferences
                 Console.WriteLine(t.FullName);
             }
 
-            var commanders2 = from type in thisAssembly.GetTypes()
-                               where typeof(ICommand).IsAssignableFrom(type) && ! type.IsInterface
-                               select type;
+            //var commanders2 = from type in thisAssembly.GetTypes()
+            //                   where typeof(ICommand).IsAssignableFrom(type) && ! type.IsInterface
+            //                   select type;
 
             // Assembly bankTypes = Assembly.Load("BankTypes.dll");
 

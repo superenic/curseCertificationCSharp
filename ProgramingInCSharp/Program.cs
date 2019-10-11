@@ -50,6 +50,8 @@ namespace ProgramingInCSharp
                 new ChangeOpinionFather(),
                 new NumerableTest(),
                 new GetAssamblyWay(),
+                new CreateClassByCode(),
+                new FunctionCodeGeneretor(),
             };
 
             var salida = "q";
